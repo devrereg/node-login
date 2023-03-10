@@ -8,7 +8,6 @@ class UserStorage {
     }
 
     static getUsers(...fields) {
-        console.log(fields);
         const users = this.#users
         const newUsers = fields.reduce((newUsers, field) => {
             if(users.hasOwnProperty(field)) {

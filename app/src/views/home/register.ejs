@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="/css/common/index.css">
     <link rel="stylesheet" href="/css/register/register.css">
-    <script src="/js/home/login.js" defer></script>
+    <script src="/js/home/register.js" defer></script>
     <title>nodejs project</title>
 </head>
 
@@ -23,10 +23,10 @@
         <input type="text" id="name" placeholder="활동명"/>
         <input type="text" id="id" placeholder="id"/>
         <input type="password" id="password" placeholder="password"/>
-        <input type="password" id="confirm-password" placeholder="password confirm"/>
+        <input type="password" id="confirmPassword" placeholder="password confirm"/>
 
 
-        <button class="register-button">가입하기</button>
+        <button class="register-button" id="registerBtn" onclick="register()">가입하기</button>
         <p>Already registered? <a href="/login">login</a></p>
 
     </div>
