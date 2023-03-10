@@ -11,11 +11,19 @@ const id= document.querySelector("#id"),
 registerBtn.addEventListener("click", register);
 
 function register() {
+
+    if(!id.value) {
+        return alert("id 를 입력해 주세요.");
+    }
+
+    if(password.value !== confirmPassword.value) {
+        return alert("비밀번호가 일치하지 않습니다.");
+    }
+
     const req = {
         id: id.value,
         name: name.value,
         password: password.value,
-        confirmPassword: confirmPassword.value,
     };
 
     fetch("/register", {
@@ -31,7 +39,7 @@ function register() {
             alert(res.msg)
         }
     }).catch((err) => {
-        console.error(new Error("로그인중 에러 발생"));
+        console.error(new Error("회원가입 중 에러 발생"));
     });
 
 }
