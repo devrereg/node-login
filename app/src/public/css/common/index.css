@@ -1,0 +1,17 @@
+:root {
+    --base-bg-color: #2c3338;
+}
+
+body {
+    margin: 0;
+}
+
+
+button {
+    border-radius: .25rem;
+    border: none;
+    background-color: #9A36FF;
+    color: #ffffff;
+    padding: 12px 0;
+    cursor: pointer;
+}
