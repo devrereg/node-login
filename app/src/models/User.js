@@ -10,8 +10,7 @@ class User {
 
     async login() {
         const client = this.body
-        const {id, password} = await UserStorage.getUserInfo("andrew");
-
+        const {id, password} = await UserStorage.getUserInfo(client.id);
         if(id) {
             if (id === client.id && password === client.password) {
                 return {success: true}
@@ -21,9 +20,9 @@ class User {
         return {success: false, msg: "존재하지 않는 id 입니다."}
     }
 
-    register(req, res) {
+    async register(req, res) {
         const client = this.body
-        const response = UserStorage.save(client);
+        const response = await UserStorage.save(client);
 
         return response
     }
