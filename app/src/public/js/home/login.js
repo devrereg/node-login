@@ -1,17 +1,16 @@
 "use strict"
 
-const id= document.querySelector("#id"),
+const email= document.querySelector("#email"),
     password= document.querySelector("#password"),
     loginBtn = document.querySelector("#loginBtn");
 
 
 
-loginBtn.addEventListener("click", login);
+loginBtn.addEventListener.off("click", login);
 
 function login() {
-
     const req = {
-        id: id.value,
+        email: email.value,
         password: password.value
     };
 

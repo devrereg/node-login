@@ -1,6 +1,6 @@
 "use strict"
 
-const id= document.querySelector("#id"),
+const email= document.querySelector("#email"),
     name= document.querySelector("#name"),
     password= document.querySelector("#password"),
     confirmPassword= document.querySelector("#confirmPassword"),
@@ -8,12 +8,12 @@ const id= document.querySelector("#id"),
 
 
 
-registerBtn.addEventListener("click", register);
+registerBtn.addEventListener.off("click", register);
 
 function register() {
 
-    if(!id.value) {
-        return alert("id 를 입력해 주세요.");
+    if(!email.value) {
+        return alert("email 를 입력해 주세요.");
     }
 
     if(password.value !== confirmPassword.value) {
@@ -21,7 +21,7 @@ function register() {
     }
 
     const req = {
-        id: id.value,
+        email: email.value,
         name: name.value,
         password: password.value,
     };
