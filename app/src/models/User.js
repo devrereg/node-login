@@ -21,15 +21,18 @@ class User {
             }
             return {success: false, msg: "존재하지 않는 email 입니다."}
         } catch(err) {
-            return {success: false, msg: err}
+            return {success: false, err}
         }
     }
 
     async register(req, res) {
         const client = this.body
-        const response = await UserStorage.save(client);
-
-        return response
+        try {
+            const response = await UserStorage.save(client);
+            return response;
+        } catch (err) {
+            return {success: false, err}
+        }
     }
 }
 

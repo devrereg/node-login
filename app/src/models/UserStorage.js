@@ -8,7 +8,7 @@ class UserStorage {
             const query= "SELECT * FROM users WHERE email = ?;";
             db.query(query, [email], (err, data) => {
                 if(err) reject(`${err}`);
-                resolve(data[0]);
+                else resolve(data[0]);
             })
         })
     }
@@ -18,7 +18,7 @@ class UserStorage {
             const query = "INSERT INTO users(email, name, password) VALUES (?,?,?);";
             db.query(query, [userInfo.email, userInfo.name, userInfo.password], (err) => {
                 if(err) reject(`${err}`);
-                resolve({success: true})
+                else resolve({success: true})
             })
         })
     }
