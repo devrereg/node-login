@@ -6,7 +6,7 @@ const email= document.querySelector("#email"),
 
 
 
-loginBtn.addEventListener.off("click", login);
+loginBtn.addEventListener("click", login);
 
 function login() {
     if(!email.value) {
@@ -22,7 +22,7 @@ function login() {
         password: password.value
     };
 
-    fetch("/login", {
+    fetch("/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -30,12 +30,13 @@ function login() {
         body: JSON.stringify(req)}
     ).then((res) => res.json()).then((res)=>{
         if(res.success) {
-            location.href ="/";
+            location.href ="/admin/dashboard";
         } else {
             if(res.err) return alert(res.err);// 실제로는 error 를 client 엑 보여주면 안된다.
             alert(res.msg)
         }
     }).catch((err) => {
+        console.log(err)
         console.error(new Error("로그인중 에러 발생"));
     });
 

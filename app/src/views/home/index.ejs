@@ -4,15 +4,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nodejs project</title>
+
+    <link rel="stylesheet" href="/css/common/index.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+
 </head>
 
 
 <body>
 
+<div class="swiper">
 
-<h1>home</h1>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="prolencer-home">
+                    <h1>PRO.<span>LENCER</span></h1>
+                    <p>진짜 프로는 직장인 실무자다!!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h1>서비스 소개</h1>
+                <h1>뭘 할수있는지</h1>
+                <h1>포트폴리오</h1>
+            </div>
+            <div class="swiper-slide">
+                <h1>찾으시는 프로가 있으신가요?</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</div>
+
+<script>
+    let swiper = new Swiper(".mySwiper", {
+        loop: false,
+    });
+
+</script>
 
 
 </body>
