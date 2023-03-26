@@ -9,11 +9,11 @@ const passport = require("passport");
 const output = {
     login: (req, res) => {
         logger.info(`GET /login 200 "로그인 화면으로 이동"`)
-        res.render("auth/login")
+        res.render("auth/login", {'layout': false})
     },
     register: (req, res) => {
         logger.info(`GET /register 200 "회원가입 화면으로 이동"`)
-        res.render("auth/register")
+        res.render("auth/register", {'layout': false})
     },
 }
 

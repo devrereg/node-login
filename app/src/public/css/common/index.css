@@ -7,6 +7,9 @@ body {
 }
 
 
+/*
+    button class
+*/
 button {
     border-radius: .25rem;
     border: none;
@@ -15,6 +18,11 @@ button {
     padding: 12px 0;
     cursor: pointer;
 }
+.icon-btn {
+    background: transparent;
+    padding: 2px;
+}
+
 
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;

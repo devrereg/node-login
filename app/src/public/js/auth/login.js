@@ -30,7 +30,7 @@ function login() {
         body: JSON.stringify(req)}
     ).then((res) => res.json()).then((res)=>{
         if(res.success) {
-            location.href ="/admin/dashboard";
+            location.href ="/admin";
         } else {
             if(res.err) return alert(res.err);// 실제로는 error 를 client 엑 보여주면 안된다.
             alert(res.msg)

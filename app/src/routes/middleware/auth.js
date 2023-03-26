@@ -12,6 +12,6 @@ exports.isNotLoggedIn = (req, res, next) => {
         next(); // 로그인 안되어있으면 다음 미들웨어
     } else {
         // 로그인이 되어있는경우
-        res.redirect("/admin/dashboard")
+        res.redirect("/admin")
     }
 };

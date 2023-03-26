@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/common/index.css">
+    <link rel="stylesheet" href="/css/admin/layouts.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어드민 홈</title>
+
+    <script src="/js/library/fontawsome.js"></script>
+    <script src="/js/admin/common/layouts.js" defer></script>
+</head>
+
+
+<body>
+
+<header>
+    <h3><strong>pro</strong>.lancer</h3>
+
+    <div class="controller">
+        <button class="user-btn icon-btn">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-caret-down" style="color: #fcfcfc;"></i>
+        </button>
+
+        <button class="menu-btn icon-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<div class="page-wrapper">
+    <nav class="nav-wrapper" id="nav">
+        <button class="nav-btn" onclick="location.href='/admin/profile'">프로필 정보</button>
+    </nav>
+
+    <%- body %>
+
+
+    <%- script %>
+</div>
+
+
+</body>
+
+</html>
