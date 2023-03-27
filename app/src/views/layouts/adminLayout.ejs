@@ -32,12 +32,17 @@
     </div>
 </header>
 
-<div class="page-wrapper">
+<div id="app">
     <nav class="nav-wrapper" id="nav">
         <button class="nav-btn" onclick="location.href='/admin/profile'">프로필 정보</button>
     </nav>
 
-    <%- body %>
+    <div class="page-container">
+        <div class="page-wrapper">
+
+            <%- body %>
+        </div>
+    </div>
 
 
     <%- script %>

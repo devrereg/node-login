@@ -31,7 +31,7 @@ router.post('/auth/register',isNotLoggedIn,authController.process.register);
     adminController
  */
 router.get('/admin',isLoggedIn, adminController.output.index);
-router.get('/admin/profile',isLoggedIn, adminController.output.index);
+router.get('/admin/profile',isLoggedIn, adminController.output.profile);
 router.get('/admin/dashboard',isLoggedIn, adminController.output.dashboard);
 router.get('/admin/test',isLoggedIn, adminController.output.test);
 
