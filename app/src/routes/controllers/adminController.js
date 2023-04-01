@@ -11,6 +11,8 @@ const output = {
     },
     profile:(req, res) => {
         logger.info(`GET / 200 "profile 화면으로 이동"`)
+
+
         res.render("admin/profile")
     },
     dashboard: (req, res) => {

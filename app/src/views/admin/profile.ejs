@@ -1,7 +1,41 @@
+<head>
+    <link rel="stylesheet" href="/css/admin/profile.css">
+    <script src="/js/admin/profile/index.js" defer></script>
+</head>
+
 <div>
     <h1>
         프로필
     </h1>
 
-    <div class="card"></div>
+    <div class="card">
+        <div class="avatar" id="avatar">
+            <div class="image">
+                <i class="empty-image fa-solid fa-user"></i>
+
+                <img id="prevImage"/>
+            </div>
+            <div class="circle">
+                <i class="camera-icon fa-solid fa-camera"></i>
+            </div>
+            <input id="avatarInput" type="file" hidden accept="image/*" onchange="changeAvatar()"/>
+        </div>
+
+
+        <div class="input-component">
+            <label for="domain">도메인:</label>
+            <div class="domain-input">
+                <span>https://pro.lancer/</span>
+                <input id="domain" name="domain" type="text"/>
+            </div>
+        </div>
+
+
+        <div class="textarea-component">
+            <label for="introduce">소개</label>
+            <textarea id="introduce" name="introduce"></textarea>
+        </div>
+
+        <span>연락처, 메일, 카카오톡</span>
+    </div>
 </div>
